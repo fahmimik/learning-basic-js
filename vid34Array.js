@@ -74,3 +74,34 @@ let array10 = ['aku', 'kamu', 'dia', 'kita', 'mereka'];
 let array11 = array10.slice(1,3);
 console.log('ini array sebelum slice:\n'+array10.join(' - '));
 console.log('ini array setelah slice:\n'+array11.join(' + '));
+
+
+console.log('\n-------foreach-------'); 
+//----------------------------------------------
+//vid 37 foreach
+let array12 = [1,2,3,4,5,6,7,8,9];
+let array12b = ['aku', 'kamu', 'dia', 'kita', 'mereka'];
+array12.forEach(function(e){ //e adalah elemen pada array
+    console.log(e);
+});
+array12b.forEach(function(e, i){ //i adalah index pada array
+    console.log('index ke ' + i + ' adalah ' + e);
+})
+
+
+// map sama seperti foreach tapi lebih baik
+console.log('\n-------map-------');
+let array13 = [1,2,3,4,5,2,2,1];
+console.log('ini array sebelum map:\n'+array13.join(' - '));
+let array13b = array13.map(function(e){ //e adalah elemen pada array
+    return e * 2; //seluruh element akan dikalikan 2 dan disimpan ke varibel array13b sebagai array baru
+});
+console.log(array13b.join(' - '));
+
+
+// short 
+let array14 = [1,3,6,13,5,9];
+console.log('\n-------short-------');
+console.log('ini array sebelum short:\n'+array14.join(' - '));
+array14.sort(function(a,b){return a-b}); //mengurutkan dari yang terkecil ke terbesar
+console.log('ini array setelah short:\n'+array14.join(' - '));
