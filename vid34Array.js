@@ -99,9 +99,31 @@ let array13b = array13.map(function(e){ //e adalah elemen pada array
 console.log(array13b.join(' - '));
 
 
-// short 
+// sort 
 let array14 = [1,3,6,13,5,9];
-console.log('\n-------short-------');
+console.log('\n-------sort-------');
 console.log('ini array sebelum short:\n'+array14.join(' - '));
 array14.sort(function(a,b){return a-b}); //mengurutkan dari yang terkecil ke terbesar
 console.log('ini array setelah short:\n'+array14.join(' - '));
+
+console.log('\n-----------------------');
+
+//filter untuk mencari nilai pada array dan mengembalikan dalam bentuk array
+console.log('\n-------filter-------');
+let array15 = [1,2,13,3,10,16,5,18,29];
+console.log('ini array sebelum filter: '+'\n'+array15.join(' - '));
+let array15b = array15.filter(function(x){
+    // return x === 5; //jika tidak ada, maka akan dikembalikan array kosong
+    // return x === 13; //jika ada, maka akan ditampilkan nilai arraynya
+    return x > 7; // untuk mencari element pada array yang nilainya lebih dari 7
+});
+console.log('ini array sesudah filter: \n'+array15b.join(' - ')); //jika menggunakan filter, maka dapat menggunakan join, karena nilai yang dikembalikan pada filter berupa array
+
+
+//find - untuk mencari nilai pada array dan mengembalikan 1 nilai
+let array16 = [0,3,7,2,22,8,4];
+console.log('\n-----find------')
+let array16b = array16.find(function(z){
+    return z > 8;
+});
+console.log(array16b);
